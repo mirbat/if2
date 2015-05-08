@@ -10,8 +10,18 @@
       <block type="controls_if" id="16" inline="false">
         <mutation else="1"></mutation>
         <value name="IF0">
-          <block type="sensor_object" id="36">
-            <field name="OBJECT">LEFTFRONT</field>
+          <block type="logic_compare" id="154" inline="true">
+            <field name="OP">LT</field>
+            <value name="A">
+              <block type="sensor_object" id="36">
+                <field name="OBJECT">LEFTFRONT</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="math_number" id="143">
+                <field name="NUM">75</field>
+              </block>
+            </value>
           </block>
         </value>
         <statement name="DO0">
@@ -34,8 +44,5 @@
     <next>
       <block type="movement_stop" id="126"></block>
     </next>
-  </block>
-  <block type="math_number" id="143" x="236" y="9">
-    <field name="NUM">75</field>
   </block>
 </xml>
